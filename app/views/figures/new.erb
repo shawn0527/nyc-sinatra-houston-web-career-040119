@@ -1,0 +1,13 @@
+<form>
+  <p>Name: <input type='text' name='figure[name]'/></p>
+</form>
+
+<h1>Title</h1>
+<% @titles.each do |title| %>
+<p>
+  <input type='checkbox' name='figure[title_ids][]' id='<%=title.id%>'><%=title.name%></input>
+</p>
+
+<p>
+  <input type='checkbox' name='figure[landmarks_ids][]' id='<%=title.id%>'><%=title.name%></input>
+</p>
