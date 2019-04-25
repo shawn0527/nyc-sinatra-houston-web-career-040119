@@ -17,14 +17,15 @@ class FiguresController < ApplicationController
     unless params[:title][:name].empty?
       title = Title.create(params[:title])
       figure.titles << title
-    
+
     end
+    
     unless params[:landmark][:name].empty?
       landmark = Landmark.create(params[:landmark])
       figure.landmarks << landmark
-  end
-  figure.save
+    end
+    figure.save
 
-end
+  end
 
 end
