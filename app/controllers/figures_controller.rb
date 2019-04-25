@@ -13,14 +13,16 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-    figure = Figure.create(params[:figure])
+    figure = Figure.new(params[:figure])
     unless params[:title][:name].empty?
       title = Title.new(params[:title])
-      figure.update(title)
+      figure.titles << title
     end
     unless params[:landmark][:name].empty?
       landmark = Landmark.create(params)
+      figure.landmarks << landmark
   end
+  figure.save
 
 
 end
