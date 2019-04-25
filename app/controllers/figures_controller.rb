@@ -21,7 +21,7 @@ class FiguresController < ApplicationController
     unless params[:landmark][:name].empty?
       figure.landmarks << Landmark.new(params[:landmark])
     end
-    figure.update(params[:figure])
+    
   end
 
 
