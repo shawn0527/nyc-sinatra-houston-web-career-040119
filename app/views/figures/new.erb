@@ -8,6 +8,7 @@
   <input type='checkbox' name='figure[title_ids][]' id='<%=title.id%>'><%=title.name%></input>
 </p>
 
+<% @landmarks.each do |landmark| %>
 <p>
-  <input type='checkbox' name='figure[landmarks_ids][]' id='<%=title.id%>'><%=title.name%></input>
+  <input type='checkbox' name='figure[landmarks_ids][]' id='<%=landmark.id%>'><%=landmark.name%></input>
 </p>
