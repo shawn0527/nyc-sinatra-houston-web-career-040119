@@ -22,6 +22,7 @@ class FiguresController < ApplicationController
       figure.landmarks << Landmark.new(params[:landmark])
     end
     figure.save
+  end
     # figure = Figure.new(params[:figure])
     # unless params[:title][:name].empty?
     #   title = Title.create(params[:title])
