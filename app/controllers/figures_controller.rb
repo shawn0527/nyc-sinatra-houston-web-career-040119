@@ -13,7 +13,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-    figure = Figure.new(name: params[:figure][:name])
+    figure = Figure.create(name: params[:figure][:name])
     unless params[:title][:name].empty?
       figure.titles << Title.create(name: params[:title][:name])
     end
