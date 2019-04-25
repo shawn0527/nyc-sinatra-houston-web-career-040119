@@ -24,6 +24,6 @@ class FiguresController < ApplicationController
       figure.landmarks << landmark
   end
   figure.save
-
+end
 
 end
