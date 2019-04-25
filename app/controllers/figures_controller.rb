@@ -12,14 +12,14 @@ class FiguresController < ApplicationController
     erb :'figures/new'
   end
 
-  post '/figures' dolearn
+  post '/figures' do
     figure = Figure.new(params[:figure])
     unless params[:title][:name].empty?
       title = Title.create(params[:title])
       figure.titles << title
 
     end
-    
+
     unless params[:landmark][:name].empty?
       landmark = Landmark.create(params[:landmark])
       figure.landmarks << landmark
