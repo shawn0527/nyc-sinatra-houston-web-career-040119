@@ -5,7 +5,7 @@
 <h1>Title</h1>
 <% @titles.each do |title| %>
 <p>
-  <input type='checkbox' name='figure[title_ids][]' id='<%=title.id%>'><%=title.name%></input>
+  <input type='checkbox' name='figure[title_ids][]' id='<%=title.name%>'><%=title.name%></input>
 </p>
 
 <% @landmarks.each do |landmark| %>
