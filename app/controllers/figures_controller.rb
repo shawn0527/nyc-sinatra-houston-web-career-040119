@@ -14,6 +14,8 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     figure = Figure.create(params[:figure])
+    unless params[:title][:name].empty?
+      title = Title.create(params[:title])
   end
 
 
