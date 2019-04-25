@@ -17,6 +17,7 @@ class FiguresController < ApplicationController
     unless params[:title][:name].empty?
       title = Title.new(params[:title])
       figure.titles << title
+      binding.pry
     end
     unless params[:landmark][:name].empty?
       landmark = Landmark.create(params)
