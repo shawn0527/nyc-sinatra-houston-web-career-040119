@@ -11,6 +11,7 @@
 <h1>Create New Title:</h1>
 </br>
 <input type='text' name='title[name]'>
+<br>
 <% @landmarks.each do |landmark| %>
 <p>
   <%=landmark.name%><input type='checkbox' name='figure[landmarks_ids][]' id='<%=landmark.name%>'></input>
