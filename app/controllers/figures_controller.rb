@@ -17,6 +17,7 @@ class FiguresController < ApplicationController
     unless params[:title][:name].empty?
       title = Title.create(params[:title])
       figure.update(title)
+    end
   end
 
 
