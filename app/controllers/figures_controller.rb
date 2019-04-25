@@ -24,6 +24,7 @@ class FiguresController < ApplicationController
       figure.landmarks << landmark
   end
   figure.save
+  binding.pry
 end
 
 end
